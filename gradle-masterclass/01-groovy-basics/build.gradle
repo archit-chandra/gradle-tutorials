@@ -54,3 +54,13 @@ def TripleIt(i){
 println TripleIt(3)
 
 println '--------------------------------------------------------------------------'
+
+// NOTES: Groovy Strings
+
+def s1 = "a string"
+println s1
+
+def s2 = 'a string'
+println s2
+
+println '--------------------------------------------------------------------------'
