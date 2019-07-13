@@ -25,3 +25,10 @@ p1.nameSayer()  // print -> Fred
 
 println '--------------------------------------------------------------------------'
 
+def theName = "John"
+
+def sayName = {
+    println theName
+}
+
+sayName()     // print -> John
