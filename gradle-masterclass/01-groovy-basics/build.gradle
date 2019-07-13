@@ -88,7 +88,7 @@ println '-----------------------------------------------------------------------
 // NOTES: Groovy properties
 //   Getters, Setters are provided by Groovy. No need to write it.
 //   But, we can change the implementation of it, if we need to.
-//   Direct access to properties by (.) notation 
+//   Direct access to properties by (.) notation
 
 class Person {
 
@@ -106,6 +106,26 @@ println p1.age // getter
 
 p1.age = 50    // setter
 println p1.age
+
+println '======='
+
+// Map Properties
+
+Map map = new HashMap()
+
+map.put("foo", "Fred")
+println map.get("foo")
+
+
+// Groovy allows access to Map properties as below
+
+map.foo = "Bill"
+map.bar = "Jane"
+map.baz = "Dave"
+
+println map.foo
+println map.bar
+println map.baz
 
 
 println '--------------------------------------------------------------------------'
