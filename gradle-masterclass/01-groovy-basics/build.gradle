@@ -1,8 +1,11 @@
 // NOTES: closures {}
 //   1. It is like lambdas, {code_blocks}
 //   2. It can be assigned to a variable
+//   3. It is like method and return the value of the last statement
 
-def echoIt = {}
+def echoIt = {
+    println 'Hello World'
+}
 
 // It doesn't work. It will print reference of the variable (by toString method)
 // To evaluate the closure, use ()
@@ -10,4 +13,4 @@ println echoIt
 
 println '----------------------------------------------------------------------'
 
-println echoIt()
+println echoIt() // null will be printed, since println does't return the value
