@@ -12,3 +12,17 @@ println "Hello World! " + sdf.format(new Date())
 
 
 println '--------------------------------------------------------------------------'
+// inline code example
+
+// NOTES: Java vs Groovy
+//  The method can also run before the method declaration
+//  Groovy reads the whole script before it invokes any method
+sayHelloWorld()
+
+void sayHelloWorld() {
+    println "Hello World again!"
+}
+
+sayHelloWorld()
+
+println '--------------------------------------------------------------------------'
