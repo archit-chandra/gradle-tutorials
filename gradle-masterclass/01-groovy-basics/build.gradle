@@ -7,6 +7,8 @@
 //   6. Use closure() to execute the statements in the closure
 //   7. It keeps the reference to the context (object) in which they are defined (and not their values)
 
+//** Delegate object = context object, for which closure keeps reference and runs against it
+
 
 class Person {
 
@@ -25,10 +27,43 @@ p1.nameSayer()  // print -> Fred
 
 println '--------------------------------------------------------------------------'
 
-def theName = "John"
+def theName = "John" // David
 
 def sayName = {
     println theName
 }
 
-sayName()     // print -> John
+sayName()     // print -> John, // David
+
+println '--------------------------------------------------------------------------'
+
+// Delegate object
+
+class Applicant {
+
+    String aName
+    Integer aAge
+
+    Applicant(aName, aAge){
+        this.aName = aName
+        this.aAge = aAge
+    }
+
+    def executeInside(Closure closure) {
+
+        // setting delegate object of closure to 'this'
+        // where, this = instance of Applicant
+        closure.delegate = this
+        closure()
+    }
+}
+
+def a1 = new Applicant("Amit", 55)
+println a1.aName  // Amit
+
+println '====='
+
+a1.executeInside {
+    println aName // Amit
+    println aAge  // 55
+}
