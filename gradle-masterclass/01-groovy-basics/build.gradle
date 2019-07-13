@@ -34,9 +34,23 @@ println '-----------------------------------------------------------------------
 int doubleIt(int i){
     println i
     i * 3
-    def y = 2 // last line value is returned, even if it is a declaration 
+    def y = 2 // last line value is returned, even if it is a declaration
 }
 
 println doubleIt(2)
+
+println '--------------------------------------------------------------------------'
+
+// NOTES: Groovy Types
+//   It can be Typed/UnTyped for variables, parameters or return values
+//   When untyped then use def (it is equivalent of Object in Java) - No Type safety and can get Runtime exception
+
+def TripleIt(i){
+    println i
+    i * 3
+    def y = 5
+}
+
+println TripleIt(3)
 
 println '--------------------------------------------------------------------------'
