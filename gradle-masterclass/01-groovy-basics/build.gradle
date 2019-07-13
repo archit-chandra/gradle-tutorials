@@ -1,0 +1,10 @@
+// NOTES: closures {}
+//   1. It is like lambdas, {code_blocks}
+//   2. It can be assigned to a variable = the value of the last statement
+//   3. It is like method and return the value of the last statement
+//   4. It can take parameters (typed/untyped)
+//   5. It can be passed as parameter to the method (it must be the last argument among parameters)
+//   6. Use closure() to execute the statements in the closure
+//   7. It keeps the reference to the context (object) in which they are defined (and not their values)
+
+
