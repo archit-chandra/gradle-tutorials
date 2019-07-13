@@ -83,6 +83,29 @@ println 'x is $x' // this will print (x is $x)
 def myCourse = "gradle"
 println "I'am training in ${myCourse.toUpperCase()}"
 
+println '--------------------------------------------------------------------------'
+
+// NOTES: Groovy properties
+//   Getters, Setters are provided by Groovy. No need to write it.
+//   But, we can change the implementation of it, if we need to.
+//   Direct access to properties by (.) notation 
+
+class Person {
+
+    String name
+    Integer age
+
+    Person(name, age){
+        this.name = name
+        this.age = age
+    }
+}
+
+def p1 = new Person("Fred", 35)
+println p1.age // getter
+
+p1.age = 50    // setter
+println p1.age
 
 
 println '--------------------------------------------------------------------------'
