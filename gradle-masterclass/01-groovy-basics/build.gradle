@@ -2,6 +2,7 @@
 //   1. It is like lambdas, {code_blocks}
 //   2. It can be assigned to a variable
 //   3. It is like method and return the value of the last statement
+//   4. It can take parameters (typed/untyped)
 
 def echoIt = {
     println 'Hello World'
@@ -14,3 +15,15 @@ println echoIt
 println '----------------------------------------------------------------------'
 
 println echoIt() // null will be printed, since println does't return the value
+
+println '----------------------------------------------------------------------'
+
+def takeIt = {p ->
+    println p
+}
+
+takeIt("Take It!!")
+
+
+
+println '----------------------------------------------------------------------'
