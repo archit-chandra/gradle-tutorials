@@ -24,6 +24,16 @@ def takeIt = {p ->
 
 takeIt("Take It!!")
 
+println '----------------------------------------------------------------------'
 
+def takeMany = {a, b, c ->
+    println a
+    println b
+    println c
+    100      // this value will be returned by closure because it is the last statement
+}
+
+takeMany(22, 33, 77)
+println takeMany("Happy", "New", "Year")
 
 println '----------------------------------------------------------------------'
