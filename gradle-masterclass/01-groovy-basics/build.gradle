@@ -71,4 +71,12 @@ multiple lines
 println s3
 
 
+// String interpolation
+
+def x = 4
+println "x is $x" // only double quotes work
+println 'x is $x' // this will print (x is $x)
+
+
+
 println '--------------------------------------------------------------------------'
