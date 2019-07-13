@@ -26,3 +26,17 @@ void sayHelloWorld() {
 sayHelloWorld()
 
 println '--------------------------------------------------------------------------'
+
+// NOTES: return statemenet
+//   It is optional
+//   When more than 1 line in method , the value of last line is returned by default
+
+int doubleIt(int i){
+    println i
+    i * 3
+    def y = 2 // last line value is returned, even if it is a declaration 
+}
+
+println doubleIt(2)
+
+println '--------------------------------------------------------------------------'
