@@ -1,0 +1,5 @@
+// NOTES: closures {}
+//   1. It is like lambdas, {code_blocks}
+//   2. It can be assigned to a variable
+
+def echoIt = {}
