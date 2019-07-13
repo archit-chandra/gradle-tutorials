@@ -8,3 +8,20 @@
 //   7. It keeps the reference to the context (object) in which they are defined (and not their values)
 
 
+class Person {
+
+    String name = "Fred"
+
+    Closure nameSayer = {
+        println name
+    }
+}
+
+def p1 = new Person()
+
+p1.nameSayer    // It will not evaluate the closure and do nothing.
+p1.nameSayer()  // print -> Fred
+
+
+println '--------------------------------------------------------------------------'
+
