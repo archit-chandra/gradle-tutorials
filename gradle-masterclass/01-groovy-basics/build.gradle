@@ -74,3 +74,17 @@ println r // 30
 
 
 println '----------------------------------------------------------------------'
+
+// closure as an iterator (calling a closure for each item)
+
+for(int j in [1,2,3]){
+    println j
+}
+
+println '======'
+
+[7,8,9].each {
+    println it  // default variable in closure
+}
+
+println '----------------------------------------------------------------------'
