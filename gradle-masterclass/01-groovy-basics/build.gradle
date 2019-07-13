@@ -3,3 +3,11 @@
 //   2. It can be assigned to a variable
 
 def echoIt = {}
+
+// It doesn't work. It will print reference of the variable (by toString method)
+// To evaluate the closure, use ()
+println echoIt
+
+println '----------------------------------------------------------------------'
+
+println echoIt()
