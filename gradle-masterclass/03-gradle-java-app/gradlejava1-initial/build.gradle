@@ -14,3 +14,10 @@ dependencies {
   compile 'org.apache.commons:commons-math3:3.6.1'
   compile 'junit:junit:4.12'
 }
+
+jar {
+  println ">>>> original baseName: $baseName"
+  baseName = "$project.name-all"
+  println ">>>> new baseName     : $baseName"
+
+}
