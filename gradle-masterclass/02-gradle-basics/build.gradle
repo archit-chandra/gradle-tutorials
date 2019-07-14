@@ -1,0 +1,24 @@
+
+task doStartProcess{
+    doLast {
+        logger.info "$name : Now starting the process - OK"
+    }
+}
+
+task doStep2{
+    doLast {
+        logger.info "$name : Performed - OK"
+    }
+}
+
+task doSomethingInTheMiddle{
+    doLast {
+        logger.info "$name : Performed the middle step - OK"
+    }
+}
+
+task doFinish{
+    doLast {
+        logger.info "$name : Done - OK"
+    }
+}
