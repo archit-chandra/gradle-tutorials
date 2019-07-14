@@ -1,3 +1,5 @@
+// define the task graph
+defaultTasks 'doStartProcess', 'doStep2', 'doSomethingInTheMiddle', 'doFinish'
 
 task doStartProcess{
     doLast {
