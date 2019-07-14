@@ -19,8 +19,7 @@ task doSomethingInTheMiddle{
     }
 }
 
-// when depending upon two tasks, those two tasks will run in the order they are defined
-task doFinish(dependsOn: ['doSomethingInTheMiddle', 'doStep2']){
+task doFinish(dependsOn: 'doSomethingInTheMiddle'){
     doLast {
         logger.info "$name : Done - OK"
     }
@@ -34,6 +33,8 @@ logger.info ">>>>>>>>>>>>>>>>>>>>>> ${project.tasks.findAll { task -> task.name.
 
 ///////////////////////////////////////////////////////////////////////
 
-doSomethingInTheMiddle.dependsOn doStartProcess, tasks.findAll { task -> task.name.startsWith('doStep2') }
+if(Math.random()< 0.5){
+    doSomethingInTheMiddle.dependsOn doStartProcess, tasks.findAll { task -> task.name.startsWith('doStep2') }
+}
 
 ///////////////////////////////////////////////////////////////////////
