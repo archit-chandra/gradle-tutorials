@@ -13,15 +13,15 @@ task doStep2{
     }
 }
 
-task doSomethingInTheMiddle{
+task doSomethingInTheMiddle (dependsOn: ['doStartProcess', tasks.findAll { task -> task.name.startsWith('doStep2') }]){
     doLast {
         logger.info "$name : Performed the middle step - OK"
     }
 }
 
-task doFinish(dependsOn: 'doSomethingInTheMiddle'){
+task doFinish {
     doLast {
-        logger.info "$name : Done - OK"
+        logger.info "$name : Done - OK >>>>>> with version = $version"
     }
 }
 
@@ -34,13 +34,23 @@ logger.info ">>>>>>>>>>>>>>>>>>>>>> ${project.tasks.findAll { task -> task.name.
 ///////////////////////////////////////////////////////////////////////
 
 if(Math.random()< 0.5){
-    doSomethingInTheMiddle.dependsOn doStartProcess, tasks.findAll { task -> task.name.startsWith('doStep2') }
+    doFinish.dependsOn doSomethingInTheMiddle, doStep2
 }
 
 ///////////////////////////////////////////////////////////////////////
 
 project.gradle.taskGraph.whenReady {
     logger.info ">>>>>>>>>>>>>>>>>>>>> $project.gradle.taskGraph.allTasks"
+}
+
+///////////////////////////////////////////////////////////////////////
+
+project.gradle.taskGraph.whenReady { taskGraph ->
+    if(taskGraph.hasTask(doStep2)){
+        project.version = "1.0"
+    } else {
+        project.version = "1.0-SNAPSHOT"
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////
