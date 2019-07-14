@@ -54,3 +54,13 @@ project.gradle.taskGraph.whenReady { taskGraph ->
 }
 
 ///////////////////////////////////////////////////////////////////////
+
+project.gradle.taskGraph.beforeTask { task ->
+    logger.info ">>>>>>>>>>>>>>>>>>>>> Before task : $task.name"
+}
+
+project.gradle.taskGraph.afterTask { task ->
+    logger.info ">>>>>>>>>>>>>>>>>>>>> After task : $task.name"
+}
+
+///////////////////////////////////////////////////////////////////////
