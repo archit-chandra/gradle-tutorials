@@ -1,3 +1,5 @@
+defaultTasks 'hello'
+
 // declaring the task
 task hi
 
@@ -14,12 +16,12 @@ task hello {
     group = "Welcome"
 
     doFirst {
-        logger.info "My name is $name and this is my second defined Action"
+        logger.info "My name is $name and this is my 1st defined Action"
     }
 
     doLast {
         // delegate object for this configuration closure is Task object (not Project)
-        logger.info "My name is $name and this is my first defined Action"
+        logger.info "My name is $name and this is my 2nd defined Action"
     }
 }
 
