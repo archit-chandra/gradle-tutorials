@@ -23,4 +23,14 @@ jar {
   baseName = "$project.name-all"
   println ">>>> new baseName     : $baseName"
 
+
+  manifest {
+    attributes 'Implementation-Title' : 'Gradle all inclusive jar',
+               'Implementation-Version' : project.version,
+               'Created-By' : 'archit-chandra',
+               'Main-Class' : 'com.denofprogramming.random.App'
+  }
+
+  println ">>>> manifest.attributes : $manifest.attributes"
+
 }
