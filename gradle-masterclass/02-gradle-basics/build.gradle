@@ -13,6 +13,10 @@ task hello {
     description = "Log the name of the task"
     group = "Welcome"
 
+    doFirst {
+        logger.info "My name is $name and this is my second defined Action"
+    }
+
     doLast {
         // delegate object for this configuration closure is Task object (not Project)
         logger.info "My name is $name and this is my first defined Action"
