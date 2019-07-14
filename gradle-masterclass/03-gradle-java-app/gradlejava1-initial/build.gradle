@@ -2,3 +2,8 @@
 plugins {
   id 'java'
 }
+
+// added repository to RepositoryHandler
+repositories {
+  mavenCentral()
+}
