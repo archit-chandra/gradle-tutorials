@@ -1,1 +1,5 @@
 task hi
+
+project.hi.doLast{
+    logger.info "Hi !!"
+}
