@@ -1,65 +1,66 @@
-defaultTasks 'hello', 'hello2'
+// define the task graph
+defaultTasks 'doFinish'
 
-// declaring the task
-task hi
-
-// adding the Action to the task
-project.hi.doLast{
-    logger.info "Hi !!"
-}
-
-/////////////////////////////////////////////////////////////////////////
-
-// configuring the task (project is omitted here)
-task hello {
-    description = "Log the name of the task"
-    group = "Welcome"
-
-    doFirst {
-        logger.info "My name is $name and this is my 1st defined Action"
-    }
-
+task doStartProcess{
     doLast {
-        // delegate object for this configuration closure is Task object (not Project)
-        logger.info "My name is $name and this is my 2nd defined Action"
+        logger.info "$name : Now starting the process - OK"
     }
 }
 
-// project can be omitted. Only for readability purposes
-project.hello.doLast{
-    logger.info "My name is $name and this is my 4th defined Action"
+task doStep2{
+    doLast {
+        logger.info "$name : Performed - OK"
+    }
 }
 
-project.hello.doLast{
-    logger.info "My name is $name and this is my 3rd defined Action"
+task doSomethingInTheMiddle (dependsOn: ['doStartProcess', tasks.findAll { task -> task.name.startsWith('doStep2') }]){
+    doLast {
+        logger.info "$name : Performed the middle step - OK"
+    }
 }
 
-hello.doFirst{
-    logger.info "My name is $name and this is my 5th defined Action"
+task doFinish {
+    doLast {
+        logger.info "$name : Done - OK >>>>>> with version = $version"
+    }
 }
 
-logger.info hello.description
-logger.info hello.group
+///////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////
+// project is implied, it can be omitted
+// project.tasks.findAll(closure) returns 1 or more task. Otherwise, runtime error
+logger.info ">>>>>>>>>>>>>>>>>>>>>> ${project.tasks.findAll { task -> task.name.startsWith('doStep2') }}"
 
-task hello2 {
-    description = "Log the name of the task"
-    group = "Welcome"
+///////////////////////////////////////////////////////////////////////
+
+if(Math.random()< 0.5){
+    doFinish.dependsOn doSomethingInTheMiddle, doStep2
 }
 
-hello2.doFirst {
-    logger.info "My name is $name and this is my 1st defined Action"
-}.doLast {
-    logger.info "My name is $name and this is my 2nd defined Action"
-}.doLast{
-    logger.info "My name is $name and this is my 4th defined Action"
-}.doLast{
-    logger.info "My name is $name and this is my 3rd defined Action"
-}.doFirst{
-    logger.info "My name is $name and this is my 5th defined Action"
+///////////////////////////////////////////////////////////////////////
+
+project.gradle.taskGraph.whenReady {
+    logger.info ">>>>>>>>>>>>>>>>>>>>> $project.gradle.taskGraph.allTasks"
 }
 
+///////////////////////////////////////////////////////////////////////
 
+project.gradle.taskGraph.whenReady { taskGraph ->
+    if(taskGraph.hasTask(doStep2)){
+        project.version = "1.0"
+    } else {
+        project.version = "1.0-SNAPSHOT"
+    }
+}
 
-/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+project.gradle.taskGraph.beforeTask { task ->
+    logger.info ">>>>>>>>>>>>>>>>>>>>> Before task : $task.name"
+}
+
+project.gradle.taskGraph.afterTask { task ->
+    logger.info ">>>>>>>>>>>>>>>>>>>>> After task : $task.name"
+}
+
+///////////////////////////////////////////////////////////////////////
