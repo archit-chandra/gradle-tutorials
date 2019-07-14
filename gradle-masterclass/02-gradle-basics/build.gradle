@@ -13,9 +13,7 @@ task doStep2{
     }
 }
 
-// doStep2 will not run twice
-// Tasks to be executed: [task ':doStartProcess', task ':doStep2', task ':doSomethingInTheMiddle', task ':doFinish']
-task doSomethingInTheMiddle(dependsOn: ['doStartProcess', tasks.findAll { task -> task.name.startsWith('doStep2') }]){
+task doSomethingInTheMiddle{
     doLast {
         logger.info "$name : Performed the middle step - OK"
     }
@@ -33,3 +31,9 @@ task doFinish(dependsOn: ['doSomethingInTheMiddle', 'doStep2']){
 // project is implied, it can be omitted
 // project.tasks.findAll(closure) returns 1 or more task. Otherwise, runtime error
 logger.info ">>>>>>>>>>>>>>>>>>>>>> ${project.tasks.findAll { task -> task.name.startsWith('doStep2') }}"
+
+///////////////////////////////////////////////////////////////////////
+
+doSomethingInTheMiddle.dependsOn doStartProcess, doStep2
+
+///////////////////////////////////////////////////////////////////////
