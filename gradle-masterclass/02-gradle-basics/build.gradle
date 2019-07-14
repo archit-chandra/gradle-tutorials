@@ -1,5 +1,16 @@
+// declaring the task
 task hi
 
+// adding the Action to the task
 project.hi.doLast{
     logger.info "Hi !!"
 }
+
+// configuring the task (project is omitted here)
+task hello {
+    description = "Log the name of the task"
+    group = "Welcome"
+}
+
+logger.info hello.description
+logger.info hello.group
