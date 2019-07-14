@@ -1,4 +1,4 @@
-defaultTasks 'hello'
+defaultTasks 'hello', 'hello2'
 
 // declaring the task
 task hi
@@ -40,5 +40,26 @@ hello.doFirst{
 
 logger.info hello.description
 logger.info hello.group
+
+/////////////////////////////////////////////////////////////////////////
+
+task hello2 {
+    description = "Log the name of the task"
+    group = "Welcome"
+}
+
+hello2.doFirst {
+    logger.info "My name is $name and this is my 1st defined Action"
+}.doLast {
+    logger.info "My name is $name and this is my 2nd defined Action"
+}.doLast{
+    logger.info "My name is $name and this is my 4th defined Action"
+}.doLast{
+    logger.info "My name is $name and this is my 3rd defined Action"
+}.doFirst{
+    logger.info "My name is $name and this is my 5th defined Action"
+}
+
+
 
 /////////////////////////////////////////////////////////////////////////
