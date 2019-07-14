@@ -3,6 +3,9 @@ plugins {
   id 'java'
 }
 
+project.group = 'com.example'
+project.version = '0.0.1-SNAPSHOT'
+
 // added repository to RepositoryHandler
 repositories {
   mavenCentral()
