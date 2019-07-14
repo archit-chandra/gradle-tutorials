@@ -30,9 +30,12 @@ project.hello.doLast{
     logger.info "My name is $name and this is my 4th defined Action"
 }
 
-// project can be omitted. Only for readability purposes
 project.hello.doLast{
     logger.info "My name is $name and this is my 3rd defined Action"
+}
+
+hello.doFirst{
+    logger.info "My name is $name and this is my 5th defined Action"
 }
 
 logger.info hello.description
