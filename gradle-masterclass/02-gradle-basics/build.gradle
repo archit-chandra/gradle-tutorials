@@ -1,5 +1,5 @@
 // define the task graph
-defaultTasks 'doStartProcess', 'doStep2', 'doSomethingInTheMiddle', 'doFinish'
+defaultTasks 'doFinish'
 
 task doStartProcess{
     doLast {
@@ -19,7 +19,8 @@ task doSomethingInTheMiddle{
     }
 }
 
-task doFinish{
+// dependsOn defines that the specified task should run before it run itself)
+task doFinish(dependsOn: 'doSomethingInTheMiddle'){
     doLast {
         logger.info "$name : Done - OK"
     }
