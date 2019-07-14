@@ -7,3 +7,10 @@ plugins {
 repositories {
   mavenCentral()
 }
+
+// added dependencies
+dependencies {
+  // implementation can also be used in place of 'compile'
+  compile 'org.apache.commons:commons-math3:3.6.1'
+  compile 'junit:junit:4.12'
+}
