@@ -13,7 +13,9 @@ task doStep2{
     }
 }
 
-task doSomethingInTheMiddle(dependsOn: 'doStartProcess'){
+// doStep2 will not run twice
+// Tasks to be executed: [task ':doStartProcess', task ':doStep2', task ':doSomethingInTheMiddle', task ':doFinish']
+task doSomethingInTheMiddle(dependsOn: ['doStartProcess', 'doStep2']){
     doLast {
         logger.info "$name : Performed the middle step - OK"
     }
