@@ -34,6 +34,6 @@ logger.info ">>>>>>>>>>>>>>>>>>>>>> ${project.tasks.findAll { task -> task.name.
 
 ///////////////////////////////////////////////////////////////////////
 
-doSomethingInTheMiddle.dependsOn doStartProcess, doStep2
+doSomethingInTheMiddle.dependsOn doStartProcess, tasks.findAll { task -> task.name.startsWith('doStep2') }
 
 ///////////////////////////////////////////////////////////////////////
