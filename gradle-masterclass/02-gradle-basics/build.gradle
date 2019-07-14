@@ -13,14 +13,14 @@ task doStep2{
     }
 }
 
-task doSomethingInTheMiddle{
+task doSomethingInTheMiddle(dependsOn: 'doStartProcess'){
     doLast {
         logger.info "$name : Performed the middle step - OK"
     }
 }
 
-// dependsOn defines that the specified task should run before it run itself)
-task doFinish(dependsOn: 'doSomethingInTheMiddle'){
+// when depending upon two tasks, those two tasks will run in the order they are defined
+task doFinish(dependsOn: ['doSomethingInTheMiddle', 'doStep2']){
     doLast {
         logger.info "$name : Done - OK"
     }
