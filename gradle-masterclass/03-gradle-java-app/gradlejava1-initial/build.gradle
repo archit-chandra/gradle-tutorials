@@ -32,4 +32,13 @@ jar {
   }
   println ">>>> manifest.attributes : $manifest.attributes"
 
+  //  compile is deprecated + it will show blank
+  //println ">>>> project.configurations : $project.configurations.compile"
+  println ">>>> project.configurations : $project.configurations.runtimeClasspath"
+  println project.configurations.runtimeClasspath.collect{File file -> project.zipTree(file)}
+  
+  from {
+    project.configurations.runtimeClasspath.collect{File file -> project.zipTree(file)}
+  }
+
 }
