@@ -10,6 +10,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+project.ext.tomcatWebApps = 'C:/tools/servers/apache-tomcat-9.0.14/webapps'
 
 repositories{
 	mavenCentral()
@@ -33,6 +34,11 @@ dependencies {
 
 war {
 	archiveName = 'myWebApp.war'
+}
+
+task deployToTomcat (type: Copy) {
+	from war.archivePath
+	into "$project.tomcatWebApps"
 }
 
 
