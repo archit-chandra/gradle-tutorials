@@ -7,3 +7,9 @@ gradle-masterclass/02-gradle-basics/.gradle/
 gradle-masterclass/02-gradle-basics/gradlew.bat
 gradle-masterclass/02-gradle-basics/gradlew
 gradle-masterclass/02-gradle-basics/gradle/wrapper/
+gradle-masterclass/03-gradle-java-app/gradlejava1-complete/
+gradle-masterclass/03-gradle-java-app/gradlejava1-initial/.gradle/
+gradle-masterclass/03-gradle-java-app/gradlejava1-initial/gradlew
+gradle-masterclass/03-gradle-java-app/gradlejava1-initial/gradlew.bat
+gradle-masterclass/03-gradle-java-app/gradlejava1-initial/.gitignore
+gradle-masterclass/03-gradle-java-app/gradlejava1-initial/gradle/wrapper/gradle-wrapper.properties
