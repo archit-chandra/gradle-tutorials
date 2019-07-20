@@ -13,9 +13,9 @@ repositories {
 
 // added dependencies
 dependencies {
-  // implementation can also be used in place of 'compile'
-  compile 'org.apache.commons:commons-math3:3.6.1'
-  compile 'junit:junit:4.12'
+  // compile scope has been deprecated, therefore (implementation, testImplementation)
+  implementation 'org.apache.commons:commons-math3:3.6.1'
+  testImplementation 'junit:junit:4.12'
 }
 
 jar {
@@ -30,7 +30,6 @@ jar {
                'Created-By' : 'archit-chandra',
                'Main-Class' : 'com.denofprogramming.random.App'
   }
-
   println ">>>> manifest.attributes : $manifest.attributes"
 
 }
