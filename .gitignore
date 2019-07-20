@@ -21,3 +21,5 @@ gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/gradlew
 gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/gradlew.bat
 gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/gradle/wrapper/gradle-wrapper.properties
 gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/build/
+*.project
+gradle-masterclass/05-multi-project/gradle-multiProject-complete/allAboutNumbers-complete/pickerNumberApplication1-complete/
