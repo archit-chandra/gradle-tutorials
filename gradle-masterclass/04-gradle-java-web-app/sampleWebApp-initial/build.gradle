@@ -36,7 +36,7 @@ war {
 	archiveName = 'myWebApp.war'
 }
 
-task deployToTomcat (type: Copy) {
+task deployToTomcat (type: Copy, dependsOn: 'war') {
 	from war.archivePath
 	into "$project.tomcatWebApps"
 }
