@@ -13,3 +13,11 @@ gradle-masterclass/03-gradle-java-app/gradlejava1-initial/gradlew
 gradle-masterclass/03-gradle-java-app/gradlejava1-initial/gradlew.bat
 gradle-masterclass/03-gradle-java-app/gradlejava1-initial/.gitignore
 gradle-masterclass/03-gradle-java-app/gradlejava1-initial/gradle/wrapper/gradle-wrapper.properties
+gradle-masterclass/03-gradle-java-app/gradlejava1-initial/build/
+gradle-masterclass/04-gradle-java-web-app/sampleWebApp-complete/
+gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/.project
+gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/.gradle/
+gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/gradlew
+gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/gradlew.bat
+gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/gradle/wrapper/gradle-wrapper.properties
+gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/build/
