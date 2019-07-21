@@ -23,9 +23,10 @@ subprojects {
     }
 
     tasks.withType(FindBugs) {
+        // reports can be found in build/reports/findbugs/*.html
         reports {
-            xml.enabled false
-            html.enabled true
+            xml.enabled = false
+            html.enabled = true
         }
     }
     
