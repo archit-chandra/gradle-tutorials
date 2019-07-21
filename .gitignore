@@ -28,3 +28,6 @@ gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-
 gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/gradlew
 gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/gradlew.bat
 gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/gradle/wrapper/gradle-wrapper.properties
+gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/pickerNumberApplication1-initial/build/
+gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/pickerNumberApplication1-initial/out/
+gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/randomNumberGen1-initial/build/
