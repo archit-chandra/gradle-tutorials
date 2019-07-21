@@ -36,6 +36,13 @@ subprojects {
             html.enabled = true
         }
     }
+
+    tasks.withType(Pmd){
+        reports{
+            xml.enabled = true
+            html.enabled = true
+        }
+    }
     
 /*    
 	//PMD
