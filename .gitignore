@@ -21,3 +21,13 @@ gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/gradlew
 gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/gradlew.bat
 gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/gradle/wrapper/gradle-wrapper.properties
 gradle-masterclass/04-gradle-java-web-app/sampleWebApp-initial/build/
+*.project
+gradle-masterclass/05-multi-project/gradle-multiProject-complete/allAboutNumbers-complete/pickerNumberApplication1-complete/
+gradle-masterclass/05-multi-project/gradle-multiProject-complete/
+gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/.gradle/
+gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/gradlew
+gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/gradlew.bat
+gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/gradle/wrapper/gradle-wrapper.properties
+gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/pickerNumberApplication1-initial/build/
+gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/pickerNumberApplication1-initial/out/
+gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/randomNumberGen1-initial/build/
