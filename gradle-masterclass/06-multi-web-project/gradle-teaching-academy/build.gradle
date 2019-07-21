@@ -1,7 +1,7 @@
 subprojects {
 
 	apply plugin: 'java-library'
-//	apply plugin: 'findbugs'
+	apply plugin: 'findbugs' // use verification >> check
 //	apply plugin: 'pmd'
 
     
