@@ -22,6 +22,11 @@ subprojects {
         testImplementation	'junit:junit:4.12'
     }
 
+    findbugs {
+        toolVersion = "3.0.1"
+        ignoreFailures = true
+    }
+
     tasks.withType(FindBugs) {
         // reports can be found in build/reports/findbugs/*.html
         reports {
