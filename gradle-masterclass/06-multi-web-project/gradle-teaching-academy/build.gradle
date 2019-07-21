@@ -37,48 +37,36 @@ subprojects {
         }
     }
 
+    pmd {
+        ignoreFailures = true
+        pmdTest.enabled= false
+        ruleSets = [
+                'java-basic',
+                'java-braces',
+                'java-clone',
+                'java-codesize',
+                'java-comments',
+                'java-controversial',
+                'java-coupling',
+                'java-design',
+                'java-empty',
+                'java-finalizers',
+                'java-imports',
+                'java-optimizations',
+                'java-strictexception',
+                'java-strings',
+                'java-typeresolution',
+                'java-unnecessary',
+                'java-unusedcode'
+        ]
+    }
+
     tasks.withType(Pmd){
         reports{
             xml.enabled = true
             html.enabled = true
         }
     }
-    
-/*    
-	//PMD
-	
-	pmd {
-		ignoreFailures = true
-		pmdTest.enabled= false
-		ruleSets = [
-			'java-basic',
-            'java-braces',
-            'java-clone',
-            'java-codesize',
-            'java-comments',
-            'java-controversial',
-            'java-coupling',
-            'java-design',
-            'java-empty',
-            'java-finalizers',
-            'java-imports',
-            'java-optimizations',
-            'java-strictexception',
-            'java-strings',
-            'java-typeresolution',
-            'java-unnecessary',
-            'java-unusedcode'		
-		]	
-	}
-	
-	tasks.withType(Pmd){
-	    reports{
-	        xml.enabled=true
-	        html.enabled=true
-	    }
-	}
-	
-*/
 	
 }
 
