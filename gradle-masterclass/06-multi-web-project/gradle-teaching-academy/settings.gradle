@@ -26,9 +26,10 @@ include 'academy-registration-repository'
 include 'academy-registration-integration'
 
 
-
+// theName is externalized to gradle.properties
 rootProject.name = theName
 
+// renaming each sub-project build file and letting gradle to know about it
 rootProject.children.each { subproject -> 
      subproject.buildFileName = "${subproject.name}.gradle" 
 }
