@@ -31,3 +31,5 @@ gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-
 gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/pickerNumberApplication1-initial/build/
 gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/pickerNumberApplication1-initial/out/
 gradle-masterclass/05-multi-project/gradle-multiProject-initial/allAboutNumbers-initial/randomNumberGen1-initial/build/
+gradle-masterclass/06-multi-web-project/gradle-teaching-academy/.gradle/
+gradle-masterclass/06-multi-web-project/gradle-teaching-academy/academy-web/build/
