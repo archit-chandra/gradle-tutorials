@@ -21,6 +21,13 @@ subprojects {
     	testImplementation 'org.springframework:spring-test:4.0.3.RELEASE'    	
         testImplementation	'junit:junit:4.12'
     }
+
+    tasks.withType(FindBugs) {
+        reports {
+            xml.enabled false
+            html.enabled true
+        }
+    }
     
 /*    
     //FindBugs
