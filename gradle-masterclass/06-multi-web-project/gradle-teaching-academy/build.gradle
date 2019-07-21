@@ -25,6 +25,8 @@ subprojects {
     findbugs {
         toolVersion = "3.0.1"
         ignoreFailures = true
+        reportLevel = "high"
+        reportsDir = file("$project.buildDir/findbugsReports") // optional
     }
 
     tasks.withType(FindBugs) {
@@ -36,24 +38,6 @@ subprojects {
     }
     
 /*    
-    //FindBugs
-   
-    findbugs {
-    	toolVersion = "3.0.1"
-    	ignoreFailures = true
-    	reportLevel = "high"
-    	reportsDir = file("$project.buildDir/findbugsReports")
-    	
-    }
-    
-    tasks.withType(FindBugs) {
-   	 reports {
-    	    xml.enabled false
-        	html.enabled true 
-    	}
-	}
-   	
-    	
 	//PMD
 	
 	pmd {
