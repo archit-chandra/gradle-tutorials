@@ -2,7 +2,7 @@ subprojects {
 
 	apply plugin: 'java-library'
 	apply plugin: 'findbugs' // use verification >> check
-//	apply plugin: 'pmd'
+	apply plugin: 'pmd'      // use verification >> check
 
     
 	description = 'Teaching Academy Root Project'
